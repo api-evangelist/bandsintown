@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bandsintown/main/json-schema/event-data.json",
+  "title": "EventData",
+  "description": "Concert event information returned by the Bandsintown API",
+  "type": "object",
+  "required": ["id", "artist_id", "url", "on_sale_datetime", "datetime", "venue", "offers", "lineup"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Bandsintown event ID",
+      "example": "13722599"
+    },
+    "artist_id": {
+      "type": "string",
+      "description": "Bandsintown artist ID associated with this event",
+      "example": "438314"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the Bandsintown event page",
+      "example": "http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67"
+    },
+    "on_sale_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when tickets go on sale",
+      "example": "2017-03-01T18:00:00"
+    },
+    "datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of the event",
+      "example": "2017-03-19T11:00:00"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the event",
+      "example": "This is a description"
+    },
+    "venue": {
+      "$ref": "venue-data.json",
+      "description": "Venue information for the event"
+    },
+    "offers": {
+      "type": "array",
+      "description": "List of ticket offers available for the event",
+      "items": {
+        "$ref": "offer-data.json"
+      }
+    },
+    "lineup": {
+      "type": "array",
+      "description": "List of artists performing at this event",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

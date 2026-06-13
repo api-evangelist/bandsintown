@@ -1,0 +1,75 @@
+{
+  "vocabulary": {
+    "name": "Bandsintown API Vocabulary",
+    "description": "Key terms and concepts used in the Bandsintown Public API",
+    "version": "3.0.0",
+    "source": "https://help.artists.bandsintown.com/en/articles/9186477-api-documentation",
+    "terms": [
+      {
+        "term": "artist",
+        "definition": "A musical performer or band whose tour dates, events, and metadata can be retrieved via the Bandsintown API.",
+        "type": "entity"
+      },
+      {
+        "term": "artistname",
+        "definition": "The URL-encoded name of an artist used as a path parameter in API requests. Special characters must be percent-encoded (/ → %252F, ? → %253F, * → %252A, \" → %27C).",
+        "type": "parameter"
+      },
+      {
+        "term": "app_id",
+        "definition": "A required query parameter representing the application ID assigned to a developer or partner by Bandsintown, used for authentication and usage tracking.",
+        "type": "parameter"
+      },
+      {
+        "term": "event",
+        "definition": "A scheduled live music concert or performance associated with one or more artists, including date, venue, ticket links, and lineup information.",
+        "type": "entity"
+      },
+      {
+        "term": "venue",
+        "definition": "The physical location where a concert event takes place, including name, city, region, country, and geographic coordinates.",
+        "type": "entity"
+      },
+      {
+        "term": "offer",
+        "definition": "A ticket purchasing opportunity associated with an event, including the offer type, purchase URL, and availability status.",
+        "type": "entity"
+      },
+      {
+        "term": "lineup",
+        "definition": "The list of artists performing at a given event.",
+        "type": "field"
+      },
+      {
+        "term": "tracker_count",
+        "definition": "The number of Bandsintown fans who have chosen to track a particular artist for event notifications.",
+        "type": "field"
+      },
+      {
+        "term": "upcoming_event_count",
+        "definition": "The total number of confirmed upcoming events for a given artist.",
+        "type": "field"
+      },
+      {
+        "term": "mbid",
+        "definition": "The MusicBrainz Identifier, a unique string that identifies an artist in the MusicBrainz open music encyclopedia.",
+        "type": "field"
+      },
+      {
+        "term": "date",
+        "definition": "A query parameter for filtering events. Accepted values are 'upcoming', 'past', 'all', or a date range in the format 'YYYY-MM-DD,YYYY-MM-DD'.",
+        "type": "parameter"
+      },
+      {
+        "term": "on_sale_datetime",
+        "definition": "The ISO 8601 date-time when tickets for an event become available for purchase.",
+        "type": "field"
+      },
+      {
+        "term": "datetime",
+        "definition": "The ISO 8601 date-time of the scheduled event start.",
+        "type": "field"
+      }
+    ]
+  }
+}

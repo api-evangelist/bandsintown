@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bandsintown/main/json-schema/offer-data.json",
+  "title": "OfferData",
+  "description": "Ticket offer information for a Bandsintown concert event",
+  "type": "object",
+  "required": ["type", "url", "status"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Type of offer (e.g., Tickets)",
+      "example": "Tickets"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to purchase or access the ticket offer",
+      "example": "http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67"
+    },
+    "status": {
+      "type": "string",
+      "description": "Availability status of the offer",
+      "example": "available"
+    }
+  }
+}

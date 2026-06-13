@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bandsintown/main/json-schema/venue-data.json",
+  "title": "VenueData",
+  "description": "Venue information for a Bandsintown concert event",
+  "type": "object",
+  "required": ["name", "latitude", "longitude", "city", "region", "country"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the venue",
+      "example": "Encore Beach Club"
+    },
+    "latitude": {
+      "type": "string",
+      "description": "Geographic latitude of the venue",
+      "example": "36.12714"
+    },
+    "longitude": {
+      "type": "string",
+      "description": "Geographic longitude of the venue",
+      "example": "-115.1629562"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the venue is located",
+      "example": "Las Vegas"
+    },
+    "region": {
+      "type": "string",
+      "description": "State or region where the venue is located",
+      "example": "NV"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country where the venue is located",
+      "example": "United States"
+    }
+  }
+}

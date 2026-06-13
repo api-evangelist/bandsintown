@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bandsintown/main/json-schema/artist-data.json",
+  "title": "ArtistData",
+  "description": "Artist information returned by the Bandsintown API",
+  "type": "object",
+  "required": ["name", "url", "image_url", "thumb_url", "facebook_page_url", "mbid", "tracker_count", "upcoming_event_count"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Bandsintown artist ID",
+      "example": 510
+    },
+    "name": {
+      "type": "string",
+      "description": "Artist name",
+      "example": "Maroon 5"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the Bandsintown artist page",
+      "example": "http://www.bandsintown.com/Maroon5?came_from=67"
+    },
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the artist's large photo",
+      "example": "https://s3.amazonaws.com/bit-photos/large/7481529.jpeg"
+    },
+    "thumb_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the artist's thumbnail photo",
+      "example": "https://s3.amazonaws.com/bit-photos/thumb/7481529.jpeg"
+    },
+    "facebook_page_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the artist's Facebook page",
+      "example": "https://www.facebook.com/maroon5"
+    },
+    "mbid": {
+      "type": "string",
+      "description": "MusicBrainz identifier for the artist",
+      "example": "0ab49580-c84f-44d4-875f-d83760ea2cfe"
+    },
+    "tracker_count": {
+      "type": "integer",
+      "description": "Number of fans tracking this artist on Bandsintown"
+    },
+    "upcoming_event_count": {
+      "type": "integer",
+      "description": "Number of upcoming events for this artist"
+    }
+  }
+}

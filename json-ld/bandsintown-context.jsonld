@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "bit": "https://rest.bandsintown.com/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "ArtistData": "schema:MusicGroup",
+    "EventData": "schema:MusicEvent",
+    "VenueData": "schema:MusicVenue",
+    "OfferData": "schema:Offer",
+
+    "id": "@id",
+    "name": "schema:name",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "image_url": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "thumb_url": {
+      "@id": "schema:thumbnail",
+      "@type": "@id"
+    },
+    "facebook_page_url": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "mbid": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "tracker_count": {
+      "@id": "bit:trackerCount",
+      "@type": "xsd:integer"
+    },
+    "upcoming_event_count": {
+      "@id": "bit:upcomingEventCount",
+      "@type": "xsd:integer"
+    },
+    "artist_id": {
+      "@id": "bit:artistId"
+    },
+    "datetime": {
+      "@id": "schema:startDate",
+      "@type": "xsd:dateTime"
+    },
+    "on_sale_datetime": {
+      "@id": "schema:availabilityStarts",
+      "@type": "xsd:dateTime"
+    },
+    "description": "schema:description",
+    "venue": {
+      "@id": "schema:location",
+      "@type": "schema:MusicVenue"
+    },
+    "offers": {
+      "@id": "schema:offers",
+      "@type": "schema:Offer",
+      "@container": "@set"
+    },
+    "lineup": {
+      "@id": "bit:lineup",
+      "@container": "@set"
+    },
+    "latitude": {
+      "@id": "schema:latitude"
+    },
+    "longitude": {
+      "@id": "schema:longitude"
+    },
+    "city": {
+      "@id": "schema:addressLocality"
+    },
+    "region": {
+      "@id": "schema:addressRegion"
+    },
+    "country": {
+      "@id": "schema:addressCountry"
+    },
+    "type": "schema:additionalType",
+    "status": {
+      "@id": "schema:availability"
+    }
+  }
+}
