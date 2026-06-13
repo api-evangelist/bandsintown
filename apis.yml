@@ -1,32 +1,106 @@
 aid: bandsintown
 name: Bandsintown
-description: "Music Events"
-url: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-specificationVersion: '0.20'
-created: '2026-05-28'
-modified: '2026-05-28'
-x-source: public-apis/public-apis
-x-category: "Music"
-x-tier: 3
-x-tier-reason: bulk-registered-from-public-apis
+description: >
+  Bandsintown is a concert discovery platform that connects fans with live music events
+  through a REST API for accessing artist event listings, venue information, and fan
+  notification management. The platform serves as the largest database of upcoming
+  concert listings and concert tickets, enabling artists, developers, and partners to
+  display tour dates, retrieve artist metadata, filter events by date range, and drive
+  fan engagement through RSVP and notification tracking. API access requires an app_id
+  parameter obtained through the Bandsintown for Artists account settings or via a
+  partnership request for broader integration use cases.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Music
-  - Public APIs
+  - concerts
+  - live music
+  - events
+  - artists
+  - venues
+  - music discovery
+  - tour dates
+  - tickets
+  - fan notifications
+  - entertainment
+url: https://raw.githubusercontent.com/api-evangelist/bandsintown/refs/heads/main/apis.yml
+created: '2026-05-28'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+
 apis:
-  - name: Bandsintown
-    description: "Music Events"
-    humanURL: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-    baseURL: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
+
+  - aid: bandsintown:public-api
+    name: Bandsintown Public API
+    description: >
+      The Bandsintown Public API (v3) provides REST endpoints for retrieving artist
+      information and event listings. Developers can look up artists by name, Bandsintown
+      ID, or Facebook page ID, retrieve upcoming, past, or date-range-filtered event
+      listings, and access venue details including name, city, region, country, and
+      geographic coordinates. All requests require an app_id query parameter for
+      authentication. Event responses include lineup, ticket offer URLs, RSVP links,
+      and venue metadata. The API supports engagement tracking via trigger parameters
+      for RSVP, notify-me, and track actions.
+    humanURL: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+    baseURL: https://rest.bandsintown.com
     tags:
-      - Music
+      - artists
+      - events
+      - venues
+      - concerts
+      - tour dates
+      - tickets
+      - REST
     properties:
       - type: Documentation
+        url: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+      - type: OpenAPI
         url: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
+      - type: Authentication
+        url: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
+      - type: PostmanCollection
+        url: https://www.postman.com/bandsintowndev/bandsintown-api/overview
+
 common:
+
   - type: Website
-    url: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-  - type: PublicAPIsListing
-    url: https://github.com/public-apis/public-apis
+    url: https://www.bandsintown.com/
+
+  - type: Documentation
+    url: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+
+  - type: GettingStarted
+    url: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
+
+  - type: GitHubOrganization
+    url: https://github.com/bandsintown
+
+  - type: SDKs
+    url: https://github.com/bandsintown/api-gem
+
+  - type: StatusPage
+    url: https://status.bandsintown.com/
+
+  - type: TermsOfService
+    url: https://corp.bandsintown.com/terms
+
+  - type: PrivacyPolicy
+    url: https://corp.bandsintown.com/privacy
+
+  - type: Contact
+    url: mailto:API@bandsintown.com
+
+  - type: Blog
+    url: https://artists.bandsintown.com/blog
+
+  - type: Plans
+    url: plans/bandsintown-plans-pricing.yml
+
+  - type: RateLimits
+    url: rate-limits/bandsintown-rate-limits.yml
+
+  - type: FinOps
+    url: finops/bandsintown-finops.yml
+
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

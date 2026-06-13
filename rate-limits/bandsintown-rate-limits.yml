@@ -1,0 +1,41 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Bandsintown
+providerId: bandsintown
+created: '2026-06-13'
+modified: '2026-06-13'
+
+throttledStatusCode: 429
+throttledMessage: "Rate limit exceeded."
+
+limits:
+
+  - scope: application
+    api: Public API v3
+    metric: requests
+    methods:
+      - GET
+    limit: not_published
+    timeFrame: not_published
+    notes: >
+      Bandsintown does not publicly publish specific numeric rate limits for the
+      Public API v3. The API is described as having "generous" limits for typical
+      use cases. Excessive or abusive usage may result in access suspension.
+      Partnership agreements may specify custom rate limit terms.
+
+authentication:
+  type: api_key
+  location: query_parameter
+  parameterName: app_id
+  notes: >
+    All requests to rest.bandsintown.com must include a valid app_id query
+    parameter. Artist keys are obtained via Bandsintown for Artists account
+    settings. Partnership application IDs are issued after approval.
+    The legacy api_version=3.0 query parameter may also be required
+    for some integrations alongside format=json.
+
+enterpriseNote: >
+  Rate limits and access quotas for partnership integrations are negotiated
+  individually. Contact API@bandsintown.com to discuss partnership terms.
+
+source: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation

@@ -1,0 +1,72 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+provider: Bandsintown
+providerId: bandsintown
+created: '2026-06-13'
+modified: '2026-06-13'
+
+billingModel: free-with-partnership
+description: >
+  Bandsintown's API is offered free of charge to artists and their management teams
+  through the Bandsintown for Artists platform. There is no published per-request or
+  per-call pricing for the standard artist-scoped API. Commercial or multi-artist
+  integrations require a partnership agreement with custom terms negotiated directly
+  with Bandsintown. The primary financial consideration is the partnership agreement
+  cost rather than usage-based metering.
+
+focusColumns:
+  - ChargeCategory: Partnership
+  - BillingCurrency: USD
+  - BillingPeriod: Custom
+  - ServiceName: Bandsintown Public API
+  - SkuName: API Access
+  - ConsumedUnit: api_request
+
+meters:
+
+  - name: api_requests
+    description: >
+      API calls to rest.bandsintown.com endpoints. There is no published
+      per-request charge for artist-tier access. Partnership integrations
+      may have volume or usage terms defined in custom agreements.
+    unit: request
+    billingModel: free_or_custom
+    tiers:
+      - tier: Artist API Key
+        included: not_specified
+        overageRate: 0
+        overageCurrency: USD
+        notes: Free for artists via Bandsintown for Artists account
+      - tier: Partnership Access
+        included: custom
+        overageRate: custom
+        notes: Terms defined in individual partnership agreements
+
+principles:
+
+  - name: Visibility
+    description: >
+      No public usage dashboard is documented for the Bandsintown API. Artists
+      can monitor their event data through the Bandsintown for Artists platform.
+      Partnership agreements may include custom reporting terms.
+    controls:
+      - type: ArtistDashboard
+        url: https://artists.bandsintown.com/
+
+  - name: Optimization
+    recommendations:
+      - description: >
+          Use the date_range filter on event queries to limit response payload
+          size and reduce unnecessary data transfer.
+      - description: >
+          Cache artist and event responses locally when real-time freshness is
+          not required to avoid redundant API calls.
+      - description: >
+          Use artist lookup by ID (id_{{artist_id}}) or Facebook page ID
+          (fbid_{{facebook_page_id}}) rather than name lookups where possible
+          to improve lookup precision and reduce ambiguous results.
+      - description: >
+          For artist website integrations, consider the free Bandsintown widget
+          as an alternative to API calls to reduce integration complexity.
+
+source: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api

@@ -1,0 +1,62 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+provider: Bandsintown
+providerId: bandsintown
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+type: free-with-partnership
+
+plans:
+
+  - name: Artist API Key
+    description: >
+      Free API key available to artists and their management teams through the
+      Bandsintown for Artists platform. Each API key is linked to a single artist
+      and provides access to retrieve that artist's event listings and information.
+      Obtained via Settings > General > Get API Key in the Bandsintown for Artists
+      dashboard.
+    type: free
+    cost: 0
+    currency: USD
+    billingPeriod: none
+    quotas:
+      - metric: artists
+        limit: 1
+        type: boolean
+        notes: Each API key is scoped to a single artist by default
+    features:
+      - Artist information retrieval by name, ID, or Facebook page ID
+      - Upcoming, past, and date-range event listings
+      - Venue metadata (name, city, region, country, coordinates)
+      - Ticket offer links and RSVP URLs
+      - Event lineup and description data
+      - Engagement tracking via trigger parameters
+
+  - name: Partnership Access
+    description: >
+      Extended API access for organizations and developers requiring integration
+      of Bandsintown data beyond a single artist scope. Partners must contact
+      Bandsintown at API@bandsintown.com to discuss terms, intended use, and
+      obtain a custom application ID. Pricing and quotas are negotiated
+      individually and governed by a partnership agreement.
+    type: enterprise
+    cost: custom
+    currency: USD
+    billingPeriod: custom
+    quotas:
+      - metric: artists
+        limit: custom
+        type: negotiated
+    features:
+      - Multi-artist event data access
+      - Custom scope and data usage rights
+      - Dedicated partnership terms
+      - Access governed by written consent from Bandsintown Inc.
+
+notes: >
+  The Bandsintown API is not a standard self-serve commercial API with published
+  pricing tiers. Artist-level access is free through the Bandsintown for Artists
+  dashboard. Broader developer or commercial integrations require partnership
+  approval and written consent. Contact API@bandsintown.com for partnership
+  inquiries. Pricing sourced from public documentation as of 2026-06-13.
