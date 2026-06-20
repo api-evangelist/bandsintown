@@ -10,7 +10,7 @@ description: >
   parameter obtained through the Bandsintown for Artists account settings or via a
   partnership request for broader integration use cases.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - concerts
   - live music
