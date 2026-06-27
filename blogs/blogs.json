@@ -1,0 +1,14 @@
+{
+  "repo": "bandsintown",
+  "feeds": [
+    {
+      "source": "https://artists.bandsintown.com/blog",
+      "feed_url": "",
+      "title": "Bandsintown for Artists Blog",
+      "saved": 0,
+      "note": "No RSS/Atom feed resolved at /feed/, /rss/, /feed.xml, /atom.xml, /index.xml. Blog page is JavaScript-rendered and exposes no static post links to scrape."
+    }
+  ],
+  "fetched": "2026-06-21T17:00:00Z",
+  "post_count": 0
+}
