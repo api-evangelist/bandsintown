@@ -62,6 +62,8 @@ apis:
 
 common:
 
+  - type: DomainSecurity
+    url: security/bandsintown-domain-security.yml
   - type: Website
     url: https://www.bandsintown.com/
 
