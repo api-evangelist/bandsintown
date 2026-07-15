@@ -62,6 +62,8 @@ apis:
 
 common:
 
+  - type: AgenticAccess
+    url: agentic-access/bandsintown-agentic-access.yml
   - type: DomainSecurity
     url: security/bandsintown-domain-security.yml
   - type: Website
