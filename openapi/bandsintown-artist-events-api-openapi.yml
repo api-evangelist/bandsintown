@@ -1,7 +1,6 @@
 swagger: '2.0'
 info:
-  description: >
-    # What is the Bandsintown API?
+  description: '# What is the Bandsintown API?
 
     The Bandsintown API is designed for artists and enterprises representing artists.
 
@@ -24,62 +23,36 @@ info:
 
     - Call our Bandsintown API with the app ID provided straight from your website or back-end platform and choose which element of the API response you wish to display. Scroll to the bottom of this page to find out about the Models used.
 
-  version: "3.0.0"
-  title: Bandsintown API
+    '
+  version: 3.0.0
+  title: Bandsintown artist events API
   contact:
     name: Bandsintown
     url: https://bandsintown.com/
   license:
     name: Terms and Conditions
     url: https://corp.bandsintown.com/data-applications-terms
-
+host: rest.bandsintown.com
 schemes:
 - https
-
-host: "rest.bandsintown.com"
-
+tags:
+- name: artist events
 paths:
-  /artists/{artistname}:
-    get:
-      tags:
-      - artist information
-      summary: Get artist information
-      operationId: artist
-      description: |
-        Get artist information
-      produces:
-      - application/json
-      parameters:
-      - in: path
-        name: artistname
-        description: "The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
-        required: true
-        type: string
-      - in: query
-        name: app_id
-        description: The application ID assigned to you by Bandsintown
-        required: true
-        type: string
-      responses:
-        200:
-          description: "200 response"
-          schema:
-            $ref: '#/definitions/ArtistData'
-
   /artists/{artistname}/events:
     get:
       tags:
       - artist events
       summary: Get upcoming, past, or all artist events, or events within a date range
       operationId: artistEvents
-      description: |
-        artist events
+      description: 'artist events
+
+        '
       produces:
       - application/json
       parameters:
       - in: path
         name: artistname
-        description: "The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+        description: 'The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for " use %27C'
         required: true
         type: string
       - in: query
@@ -89,7 +62,7 @@ paths:
         type: string
       - in: query
         name: date
-        description: "Can be one of the following values: \"upcoming\", \"past\", \"all\", or a date range e.g. \"2015-05-05,2017-05-05\". If not specified, only upcoming shows are returned"
+        description: 'Can be one of the following values: "upcoming", "past", "all", or a date range e.g. "2015-05-05,2017-05-05". If not specified, only upcoming shows are returned'
         required: false
         type: string
       responses:
@@ -99,50 +72,24 @@ paths:
             type: array
             items:
               $ref: '#/definitions/EventData'
-
 definitions:
-  ArtistData:
+  OfferData:
     type: object
     required:
-    - name
+    - type
     - url
-    - image_url
-    - thumb_url
-    - facebook_page_url
-    - mbid
-    - tracker_count
-    - upcoming_event_count
+    - status
     properties:
-      id:
-        type: integer
-        example: 510
-      name:
+      type:
         type: string
-        example: 'Maroon 5'
+        example: Tickets
       url:
         type: string
         format: url
-        example: 'http://www.bandsintown.com/Maroon5?came_from=67'
-      image_url:
+        example: http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67
+      status:
         type: string
-        format: url
-        example: 'https://s3.amazonaws.com/bit-photos/large/7481529.jpeg'
-      thumb_url:
-        type: string
-        format: url
-        example: 'https://s3.amazonaws.com/bit-photos/thumb/7481529.jpeg'
-      facebook_page_url:
-        type: string
-        format: url
-        example: 'https://www.facebook.com/maroon5'
-      mbid:
-        type: string
-        example: '0ab49580-c84f-44d4-875f-d83760ea2cfe'
-      tracker_count:
-        type: integer
-      upcoming_event_count:
-        type: integer
-
+        example: available
   EventData:
     type: object
     required:
@@ -166,7 +113,7 @@ definitions:
       url:
         type: string
         format: url
-        example: 'http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67'
+        example: http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67
       on_sale_datetime:
         type: string
         format: datetime
@@ -177,7 +124,7 @@ definitions:
         example: '2017-03-19T11:00:00'
       description:
         type: string
-        example: 'This is a description'
+        example: This is a description
       venue:
         $ref: '#/definitions/VenueData'
       offers:
@@ -188,7 +135,6 @@ definitions:
         type: array
         items:
           type: string
-
   VenueData:
     type: object
     required:
@@ -201,7 +147,7 @@ definitions:
     properties:
       name:
         type: string
-        example: 'Encore Beach Club'
+        example: Encore Beach Club
       latitude:
         type: string
         format: double
@@ -212,28 +158,10 @@ definitions:
         example: '-115.1629562'
       city:
         type: string
-        example: 'Las Vegas'
+        example: Las Vegas
       region:
         type: string
-        example: 'NV'
+        example: NV
       country:
         type: string
-        example: 'United States'
-
-  OfferData:
-    type: object
-    required:
-    - type
-    - url
-    - status
-    properties:
-      type:
-        type: string
-        example: 'Tickets'
-      url:
-        type: string
-        format: url
-        example: 'http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67'
-      status:
-        type: string
-        example: 'available'
+        example: United States
