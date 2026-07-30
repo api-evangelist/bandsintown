@@ -10,7 +10,19 @@ description: >
   parameter obtained through the Bandsintown for Artists account settings or via a
   partnership request for broader integration use cases.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bandsintown.png
 tags:
   - concerts
   - live music
@@ -28,38 +40,38 @@ modified: '2026-06-13'
 specificationVersion: '0.19'
 
 apis:
-
-  - aid: bandsintown:public-api
-    name: Bandsintown Public API
-    description: >
-      The Bandsintown Public API (v3) provides REST endpoints for retrieving artist
-      information and event listings. Developers can look up artists by name, Bandsintown
-      ID, or Facebook page ID, retrieve upcoming, past, or date-range-filtered event
-      listings, and access venue details including name, city, region, country, and
-      geographic coordinates. All requests require an app_id query parameter for
-      authentication. Event responses include lineup, ticket offer URLs, RSVP links,
-      and venue metadata. The API supports engagement tracking via trigger parameters
-      for RSVP, notify-me, and track actions.
-    humanURL: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
-    baseURL: https://rest.bandsintown.com
-    tags:
-      - artists
-      - events
-      - venues
-      - concerts
-      - tour dates
-      - tickets
-      - REST
-    properties:
-      - type: Documentation
-        url: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
-      - type: OpenAPI
-        url: https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-      - type: Authentication
-        url: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
-      - type: PostmanCollection
-        url: https://www.postman.com/bandsintowndev/bandsintown-api/overview
-
+- aid: bandsintown:bandsintown-artist-events-api
+  name: Bandsintown artist events API
+  description: The artist events API from Bandsintown — 1 operation(s) for artist events.
+  humanURL: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+  baseURL: https://rest.bandsintown.com
+  tags:
+  - artist events
+  properties:
+  - type: OpenAPI
+    url: openapi/bandsintown-artist-events-api-openapi.yml
+  - type: Documentation
+    url: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+  - type: Authentication
+    url: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
+  - type: PostmanCollection
+    url: https://www.postman.com/bandsintowndev/bandsintown-api/overview
+- aid: bandsintown:bandsintown-artist-information-api
+  name: Bandsintown artist information API
+  description: The artist information API from Bandsintown — 1 operation(s) for artist information.
+  humanURL: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+  baseURL: https://rest.bandsintown.com
+  tags:
+  - artist information
+  properties:
+  - type: OpenAPI
+    url: openapi/bandsintown-artist-information-api-openapi.yml
+  - type: Documentation
+    url: https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
+  - type: Authentication
+    url: https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
+  - type: PostmanCollection
+    url: https://www.postman.com/bandsintowndev/bandsintown-api/overview
 common:
 
   - type: AgenticAccess
