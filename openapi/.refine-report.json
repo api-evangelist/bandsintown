@@ -1,0 +1,16 @@
+{
+  "provider": "bandsintown",
+  "sources": [
+    "bandsintown-artist-events-api-openapi.yml",
+    "bandsintown-artist-information-api-openapi.yml"
+  ],
+  "outputs": [
+    "bandsintown-artist-events-api-openapi.yml",
+    "bandsintown-artist-information-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
