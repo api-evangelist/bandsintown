@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bandsintown artist events artist information API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "artist information",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get artist information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/artists/:artistname",
+            "params": [
+              {
+                "name": "artistname",
+                "value": "",
+                "type": "path",
+                "description": "The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query",
+                "description": "The application ID assigned to you by Bandsintown"
+              }
+            ]
+          },
+          "docs": "Get artist information\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

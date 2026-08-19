@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "e6aced72-db62-4acb-aff6-7aaf7e256257",
+      "name": "artist events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2424f253-67dc-4e97-97d7-117995a83879",
+          "name": "Get upcoming, past, or all artist events, or events within a date range",
+          "request": {
+            "name": "Get upcoming, past, or all artist events, or events within a date range",
+            "description": {
+              "content": "artist events\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "artists",
+                ":artistname",
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) The application ID assigned to you by Bandsintown"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<string>",
+                  "description": "Can be one of the following values: \"upcoming\", \"past\", \"all\", or a date range e.g. \"2015-05-05,2017-05-05\". If not specified, only upcoming shows are returned"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "artistname",
+                  "description": "(Required) The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f469b48-42bc-4d34-a49a-f44e6bc21627",
+              "name": "Shows within a date range for the selected artist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "artists",
+                    ":artistname",
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "artistname",
+                      "description": "(Required) The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for \" use %27C"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"13722599\",\n    \"artist_id\": \"438314\",\n    \"url\": \"http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67\",\n    \"on_sale_datetime\": \"2017-03-01T18:00:00\",\n    \"datetime\": \"2017-03-19T11:00:00\",\n    \"venue\": {\n      \"name\": \"Encore Beach Club\",\n      \"latitude\": \"36.12714\",\n      \"longitude\": \"-115.1629562\",\n      \"city\": \"Las Vegas\",\n      \"region\": \"NV\",\n      \"country\": \"United States\"\n    },\n    \"offers\": [\n      {\n        \"type\": \"Tickets\",\n        \"url\": \"http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67\",\n        \"status\": \"available\"\n      },\n      {\n        \"type\": \"Tickets\",\n        \"url\": \"http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67\",\n        \"status\": \"available\"\n      }\n    ],\n    \"lineup\": [\n      \"string\",\n      \"string\"\n    ],\n    \"description\": \"This is a description\"\n  },\n  {\n    \"id\": \"13722599\",\n    \"artist_id\": \"438314\",\n    \"url\": \"http://www.bandsintown.com/event/13722599?app_id=foo&artist=Skrillex&came_from=67\",\n    \"on_sale_datetime\": \"2017-03-01T18:00:00\",\n    \"datetime\": \"2017-03-19T11:00:00\",\n    \"venue\": {\n      \"name\": \"Encore Beach Club\",\n      \"latitude\": \"36.12714\",\n      \"longitude\": \"-115.1629562\",\n      \"city\": \"Las Vegas\",\n      \"region\": \"NV\",\n      \"country\": \"United States\"\n    },\n    \"offers\": [\n      {\n        \"type\": \"Tickets\",\n        \"url\": \"http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67\",\n        \"status\": \"available\"\n      },\n      {\n        \"type\": \"Tickets\",\n        \"url\": \"http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67\",\n        \"status\": \"available\"\n      }\n    ],\n    \"lineup\": [\n      \"string\",\n      \"string\"\n    ],\n    \"description\": \"This is a description\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://rest.bandsintown.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b0785f70-ed37-4a5e-b2f5-3485224d60cb",
+    "name": "Bandsintown artist events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "# What is the Bandsintown API?\nThe Bandsintown API is designed for artists and enterprises representing artists.\n\nIt offers read-only access to artist info and artist events:\n- artist info: returns the link to the Bandsintown artist page, the link to the artist photo, the current number of trackers and more\n- artist events: returns the list of events including their date and time, venue name and location, ticket links, lineup, description and the link to the Bandsintown event page\n\nNote you can specify if you only want to return upcoming events, past events, all events, or events within a given date range.\n\n# Getting Started\n- In order to use the Bandsintown API, you must read and accept our Terms and Conditions below and you must have written consent from Bandsintown Inc. Any other use of the Bandsintown API is prohibited. [Contact Bandsintown](http://help.bandsintown.com/) to tell us what you plan to do and request your personal application ID.\n- Find out about the API methods available and the format of the API responses below. Select the method you wish to use and try it out online with the app ID provided to you.\n- Call our Bandsintown API with the app ID provided straight from your website or back-end platform and choose which element of the API response you wish to display. Scroll to the bottom of this page to find out about the Models used.\n\n\nContact Support:\n Name: Bandsintown",
+      "type": "text/plain"
+    }
+  }
+}
