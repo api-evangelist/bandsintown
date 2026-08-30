@@ -36,16 +36,16 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bandsintown.png
 tags:
-  - Concerts
-  - Live Music
+  - concerts
+  - live music
   - Event
-  - Artists
-  - Venues
-  - Music Discovery
+  - artists
+  - venues
+  - music discovery
   - tour dates
   - Tickets
   - fan notifications
-  - Entertainment
+  - entertainment
 tags_raw:
   - concerts
   - live music
