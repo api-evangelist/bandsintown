@@ -1,8 +1,7 @@
 {
   "provider": "bandsintown",
   "sources": [
-    "bandsintown-artist-events-api-openapi.yml",
-    "bandsintown-artist-information-api-openapi.yml"
+    "_original/bandsintown-public-api-openapi.yml"
   ],
   "outputs": [
     "bandsintown-artist-events-api-openapi.yml",
@@ -11,6 +10,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "bandsintown-public-api-openapi.yml: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "bandsintown-public-api-openapi.yml: declared missing tag: artist events",
+    "bandsintown-public-api-openapi.yml: declared missing tag: artist information",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "bandsintown-artist-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bandsintown-artist-information-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
