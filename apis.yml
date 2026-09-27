@@ -43,7 +43,7 @@ tags:
   - Venues
   - Music Discovery
   - tour dates
-  - Tickets
+  - Ticketing
   - fan notifications
   - Entertainment
 tags_raw:
@@ -57,6 +57,7 @@ tags_raw:
   - tickets
   - fan notifications
   - entertainment
+  - Tickets
 url: https://raw.githubusercontent.com/api-evangelist/bandsintown/refs/heads/main/apis.yml
 created: '2026-05-28'
 modified: '2026-06-13'
