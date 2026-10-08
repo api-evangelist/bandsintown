@@ -65,3 +65,22 @@ notes: >
   dashboard. Broader developer or commercial integrations require partnership
   approval and written consent. Contact API@bandsintown.com for partnership
   inquiries. Pricing sourced from public documentation as of 2026-06-13.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units: []
+  plans:
+  - name: Artist API Key
+    access: free
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Partnership Access
+    access: enterprise
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
