@@ -51,36 +51,23 @@ paths:
                   $ref: '#/components/schemas/EventData'
 components:
   schemas:
-    VenueData:
+    OfferData:
       type: object
       required:
-      - name
-      - latitude
-      - longitude
-      - city
-      - region
-      - country
+      - type
+      - url
+      - status
       properties:
-        name:
+        type:
           type: string
-          example: Encore Beach Club
-        latitude:
+          example: Tickets
+        url:
           type: string
-          format: double
-          example: '36.12714'
-        longitude:
+          format: url
+          example: http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67
+        status:
           type: string
-          format: double
-          example: '-115.1629562'
-        city:
-          type: string
-          example: Las Vegas
-        region:
-          type: string
-          example: NV
-        country:
-          type: string
-          example: United States
+          example: available
     EventData:
       type: object
       required:
@@ -126,20 +113,33 @@ components:
           type: array
           items:
             type: string
-    OfferData:
+    VenueData:
       type: object
       required:
-      - type
-      - url
-      - status
+      - name
+      - latitude
+      - longitude
+      - city
+      - region
+      - country
       properties:
-        type:
+        name:
           type: string
-          example: Tickets
-        url:
+          example: Encore Beach Club
+        latitude:
           type: string
-          format: url
-          example: http://www.bandsintown.com/event/13722599/buy_tickets?app_id=foo&artist=Skrillex&came_from=67
-        status:
+          format: double
+          example: '36.12714'
+        longitude:
           type: string
-          example: available
+          format: double
+          example: '-115.1629562'
+        city:
+          type: string
+          example: Las Vegas
+        region:
+          type: string
+          example: NV
+        country:
+          type: string
+          example: United States
