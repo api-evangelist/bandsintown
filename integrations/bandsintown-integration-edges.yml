@@ -1,0 +1,26 @@
+generated: '2026-10-22'
+method: searched
+checked:
+- wix/integrations/wix-integration-edges.yml
+source:
+- wix/integrations/wix-integration-edges.yml
+edges:
+- partner_name: Wix (own)
+  partner: wix
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.wix.com/app-market/developer/bandsintown-llc
+  mirror_of: wix/integrations/wix-integration-edges.yml
+  apps:
+  - Bandsintown Widget
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Music
+  publisher_verified:
+  - Verified by Wix
