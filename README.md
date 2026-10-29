@@ -1,4 +1,4 @@
-# Bandsintown (bandsintown)
+# Bandsintown
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,83 +64,150 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bandsintown is a concert discovery platform that connects fans with live music events through a REST API for accessing artist event listings, venue information, and fan notification management. The platform serves as the largest database of upcoming concert listings and concert tickets, enabling artists, developers, and partners to display tour dates, retrieve artist metadata, filter events by date range, and drive fan engagement through RSVP and notification tracking.
+Bandsintown is a concert discovery platform that connects fans with live music events through a REST API for accessing artist event listings, venue information, and fan notification management. The platform serves as the largest database of upcoming concert listings and concert tickets, enabling artists, developers, and partners to display tour dates, retrieve artist metadata, filter events by date range, and drive fan engagement through RSVP and notification tracking. API access requires an app_id parameter obtained through the Bandsintown for Artists account settings or via a partnership request for broader integration use cases.
 
-**APIs.json:** https://raw.githubusercontent.com/api-evangelist/bandsintown/refs/heads/main/apis.yml
+**Areas:** Concerts · Live Music · Event · Artists · Venues · Music Discovery · tour dates · Ticketing · fan notifications · Entertainment
 
-**Naftiko:** https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=bandsintown-api-evangelist&utm_content=repo
+## Bandsintown on APIs.io
 
----
+Everything profiled for Bandsintown is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bandsintown/](https://apis.io/providers/bandsintown/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-concerts, live music, events, artists, venues, music discovery, tour dates, tickets, fan notifications, entertainment
+- [Bandsintown artist events API](https://apis.io/apis/bandsintown/bandsintown-artist-events-api/) — The artist events API from Bandsintown — 1 operation(s) for artist events.
+- [Bandsintown artist information API](https://apis.io/apis/bandsintown/bandsintown-artist-information-api/) — The artist information API from Bandsintown — 1 operation(s) for artist information.
 
----
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Bandsintown Public API
+#### Agentic access (1)
 
-The Bandsintown Public API (v3) provides REST endpoints for retrieving artist information and event listings. Developers can look up artists by name, Bandsintown ID, or Facebook page ID, retrieve upcoming, past, or date-range-filtered event listings, and access venue details.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Documentation:** https://help.artists.bandsintown.com/en/articles/9186477-api-documentation
-- **Getting Started:** https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api
-- **Base URL:** https://rest.bandsintown.com
-- **OpenAPI Spec:** https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-- **Postman:** https://www.postman.com/bandsintowndev/bandsintown-api/overview
+- [Bandsintown Agentic Access](https://apis.io/agentic-access/bandsintown/bandsintown-agentic-access/)
 
----
+#### JSON Schema (4)
 
-## Plans, Rate Limits, and FinOps
+The data models the API reads and writes.
 
-### Plans
+- [ArtistData](https://apis.io/schemas/bandsintown/artist-data/)
+- [EventData](https://apis.io/schemas/bandsintown/event-data/)
+- [OfferData](https://apis.io/schemas/bandsintown/offer-data/)
+- [VenueData](https://apis.io/schemas/bandsintown/venue-data/)
 
-| Plan | Cost | Scope |
-|------|------|-------|
-| Artist API Key | Free | Single artist via Bandsintown for Artists account |
-| Partnership Access | Custom | Multi-artist, negotiated terms via API@bandsintown.com |
+#### JSON-LD (1)
 
-Full plans detail: [plans/bandsintown-plans-pricing.yml](plans/bandsintown-plans-pricing.yml)
+Linked-data contexts for the provider's vocabulary.
 
-### Rate Limits
+- [Bandsintown Context](https://apis.io/jsonld/bandsintown/bandsintown-context/)
 
-Specific numeric rate limits are not publicly published. The API is described as having generous limits for typical artist website use cases. Rate limits for partnership integrations are defined in custom agreements.
+#### Examples (2)
 
-Full rate limits detail: [rate-limits/bandsintown-rate-limits.yml](rate-limits/bandsintown-rate-limits.yml)
+Example requests and responses.
 
-### FinOps
+- [Artist Data Example](https://apis.io/examples/bandsintown/artist-data-example/)
+- [Event Data Example](https://apis.io/examples/bandsintown/event-data-example/)
 
-Billing model: free for artist-scoped access; partnership agreements have custom terms. No published per-request pricing. Primary cost consideration is partnership agreement terms negotiated with Bandsintown directly.
+#### Collections (2)
 
-Full FinOps detail: [finops/bandsintown-finops.yml](finops/bandsintown-finops.yml)
+Postman and Open Collection request collections.
 
----
+- [Bandsintown artist events API](https://apis.io/collections/bandsintown/open-bandsintown-artist-events-api/)
+- [Bandsintown artist events artist information API](https://apis.io/collections/bandsintown/open-bandsintown-artist-information-api/)
 
-## Timestamps
+#### Governance rules (1)
 
-- **Created:** 2026-05-28
-- **Modified:** 2026-06-13
+Spectral rulesets for the provider's contracts.
 
----
+- [Bandsintown — jsonschema rules](https://apis.io/rules/bandsintown/bandsintown-jsonschema-spectral-rules/)
 
-## Common Properties
+#### Security (1)
 
-| Property | URL |
-|----------|-----|
-| Website | https://www.bandsintown.com/ |
-| Documentation | https://help.artists.bandsintown.com/en/articles/9186477-api-documentation |
-| Getting Started | https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api |
-| GitHub Organization | https://github.com/bandsintown |
-| SDKs (Ruby) | https://github.com/bandsintown/api-gem |
-| Status Page | https://status.bandsintown.com/ |
-| Terms of Service | https://corp.bandsintown.com/terms |
-| Privacy Policy | https://corp.bandsintown.com/privacy |
-| Blog | https://artists.bandsintown.com/blog |
-| Contact | API@bandsintown.com |
+Authentication, trust centre, and vulnerability disclosure.
 
----
+- [Bandsintown Domain Security](https://apis.io/security/bandsintown/bandsintown-domain-security/)
 
-## Maintainers
+#### Plans and pricing (1)
 
-- **Kin Lane** — kin@apievangelist.com
+Published plans, tiers and prices.
+
+- [Bandsintown Plans Pricing](https://apis.io/plans/bandsintown/bandsintown-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bandsintown Rate Limits](https://apis.io/rate-limits/bandsintown/bandsintown-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bandsintown Finops](https://apis.io/finops/bandsintown/bandsintown-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.bandsintown.com/)
+- [Documentation](https://help.artists.bandsintown.com/en/articles/9186477-api-documentation)
+- [Getting started](https://help.artists.bandsintown.com/en/articles/7053475-what-is-the-bandsintown-api)
+- [Blog](https://artists.bandsintown.com/blog)
+- [Terms of service](https://corp.bandsintown.com/terms)
+- [Privacy policy](https://corp.bandsintown.com/privacy)
+- [GitHub](https://github.com/bandsintown)
+- [Status](https://status.bandsintown.com/)
+
+## API Evangelist rating
+
+**Kin Score 37.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 44.8 |
+| Contract governance | 9.8 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 26.3 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bandsintown/](https://apis.io/providers/bandsintown/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bandsintown: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bandsintown/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
